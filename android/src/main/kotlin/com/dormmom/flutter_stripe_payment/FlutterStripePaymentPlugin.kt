@@ -44,7 +44,7 @@ class FlutterStripePaymentPlugin: FlutterPlugin, ActivityAware {
         @JvmStatic
         fun registerWith(registrar: PluginRegistry.Registrar) {
             currentActivity = registrar.activity()
-            setUpPluginMethods(registrar.activity(), registrar.messenger(), currentActivity)
+            setUpPluginMethods(registrar.context(), registrar.messenger(), currentActivity)
 
         }
 
